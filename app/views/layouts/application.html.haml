@@ -9,20 +9,22 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
 
     :css
-      .nav {
-        / background-color: #bcd39c;
-        / width: 100%;
-        / height: 100%;
-        / padding-top:50px;
-        margin-top:100px;
+
+      / .nav {
+      /   margin-top:100px;
+      / }
+
+      .navbar-nav > li{
+        padding-left:15px;
+        padding-right:15px;
       }
 
-      .btn-margin-left {
-          margin-left: 2px;
-      }
+      / .btn-margin-left {
+      /     margin-left: 2px;
+      / }
 
 
-  %body
+  %body{:style => "background-color:#f2f2f2;"}
     #nav.nav
       %nav.navbar.navbar-expand-md.navbar-dark.bg-dark.fixed-top
         %a.navbar-brand{:href => home_path} Repositório de Manuais
@@ -34,15 +36,11 @@
             %li
               = link_to "Home", home_path
             %li
-              = link_to "Upload Manual", new_manual_path          
+              = link_to "Pesquisar Manual", search_path  
+            %li
+              = link_to "Enviar Manual", new_manual_path          
             %li
               = link_to "Sobre", about_path
-
-    / - if current_user
-    /   = link_to 'Sign Out', destroy_user_session_path, method: :delete
-    / - else
-    /   = link_to 'Sign Up', new_user_registration_path
-    /   = link_to 'Sign In', new_user_session_path
     .container
       %p.notice= notice
       %p.alert= alert

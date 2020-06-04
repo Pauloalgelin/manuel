@@ -1,19 +1,19 @@
-%h1 Add Manual
+%h1 Adicionar Manual
 = form_for :manual, url: manuals_path do |f|
   %p
-    = f.label :tipo
+    = f.label :"Categoria"
     %br/
-    = f.text_field(:tipo, {:class => "form-control"})
+    = f.select(:tipo, options_for_select([["Aspirador"],["Geladeira"], ["Microondas"]]), {:class => "form-control"})
   %p
-    = f.label :marca
+    = f.label :"Marca"
     %br/
-    = f.text_area(:marca, {:class => "form-control"})
+    = f.select(:marca, options_for_select([["Brastemp"],["Electrolux"], ["Philips"]]), {:class => "form-control"})  
   %p
-    = f.label :codigo
+    = f.label :"Código"
     %br/
     = f.text_area(:codigo, {:class => "form-control"})
   %p
-    = f.label :modelo
+    = f.label :"Modelo"
     %br/
     = f.text_area(:modelo, {:class => "form-control"})
   %p
@@ -21,5 +21,6 @@
     %br/
     = f.text_area(:path, {:class => "form-control"})
   %p
-    = f.submit({:class => "btn btn-primary"})
+    %button.btn{:class => "btn btn-primary"} Enviar Manual
+    / = f.submit({:class => "btn btn-primary", M})
 
