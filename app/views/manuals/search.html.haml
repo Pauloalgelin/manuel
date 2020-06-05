@@ -1,0 +1,23 @@
+%h1 Busca
+= form_tag search_path, :method => "get" do
+  = text_field_tag :search, params[:search]
+  = submit_tag "Search"
+
+- @manuals.each do |manual|
+  %ul
+    Tipo:
+    = manual.tipo
+    %br
+    Marca:
+    =  manual.marca
+    %br
+    Modelo:
+    =  manual.modelo
+    %br
+    Codigo:
+    =  manual.codigo
+    %br
+    Manual id:
+    = manual.id
+    %br
+    = link_to "Abrir Manual", :controller => "manuals", :action => "show", :id => manual.id

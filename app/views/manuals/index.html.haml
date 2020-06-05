@@ -1,8 +1,57 @@
-%h1 Pesquisa
+/ %a.btn.btn-primary{:href => search_path, :role => "button"} Pesquisa
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    :css      
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
 
-/ - if current_user
-/ 	= link_to 'Sign Out', destroy_user_session_path, method: :delete
-/ - else
-/ 	= link_to 'Sign Up', new_user_registration_path
-/ 	= link_to 'Sign In', new_user_session_path
+      body {
+        position: relative;
+      }
 
+      .buttons-holder {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .block {
+        display: inline;
+        width: 100%;
+        / border: none;
+        padding: 80px 80px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+      }
+
+  %body
+    / %input{:style => "margin-left: auto", :type => "submit"}/
+    .buttons-holder
+
+      %a.button.block{:type => "button", :class => "btn btn-outline-primary", :href => search_path} Pesquisar
+
+      %a.button.block{:type => "button", :class => "btn btn-outline-primary", :href => new_manual_path} Enviar Manual
+
+
+    /   %h1 This page is horizontally centered on screens that are wider than 500 pixels.
+    /   %h1 Resize the browser window to see the effect.
+    /   %p
+    /     This page is always centered on screens that are wider than 500px. On screens that are less than
+    /     500px wide, it will span the whole of the page.
+    /   %p Content inside this container is centered horizontally.
+    /   %p Content inside this container is centered horizontally.
+    /   %p Content inside this container is centered horizontally.
+    /   %p Content inside this container is centered horizontally.
+    /   %p Content inside this container is centered horizontally.
+    /   %p Content inside this container is centered horizontally.
+    /   %p Content inside this container is centered horizontally.
+    /   %p Content inside this container is centered horizontally.
+    /   %p Content inside this container is centered horizontally.
