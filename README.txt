@@ -5,6 +5,11 @@ Paulo Henrique Silva Araujo - 8941112
 Renan Costa Laiz - 9779089
 
 -------------------------------------------------------------------------------
+Versões utilizadas
+Ruby: ruby 2.6.3p62 (2019-04-16 revision 67580) [x86_64-linux]
+Ruby on Rails: Rails 5.1.7
+
+-------------------------------------------------------------------------------
 Introdução
 
 O projeto consiste em criar uma plataforma que possa ser utilizada como um repositório de manuais, seja de eletrodomésticos, móveis de escritório, carros, entre outros bens de consumo duráveis. 
