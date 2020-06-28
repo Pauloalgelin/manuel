@@ -21,3 +21,6 @@
     = manual.id
     %br
     = link_to "Abrir Manual", :controller => "manuals", :action => "show", :id => manual.id
+    %br
+    - if manual.path.attached?
+      = link_to "Download", manual.path, download: ""

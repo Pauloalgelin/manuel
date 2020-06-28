@@ -9,7 +9,7 @@ Versões utilizadas
 
 Ruby: ruby 2.7.0
 
-Ruby on Rails: Rails 5.1.7
+Ruby on Rails: Rails 6.0.2
 
 -------------------------------------------------------------------------------
 Introdução

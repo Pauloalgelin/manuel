@@ -17,9 +17,9 @@
     %br/
     = f.text_area(:modelo, {:class => "form-control"})
   %p
-    = f.label :path
+    = f.label :"Carregar Manual"
     %br/
-    = f.text_area(:path, {:class => "form-control"})
+    = f.file_field(:path, {:class => "form-control"})
   %p
     %button.btn{:class => "btn btn-primary"} Enviar Manual
     / = f.submit({:class => "btn btn-primary", M})
