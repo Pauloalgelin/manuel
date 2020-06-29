@@ -9,17 +9,18 @@
     %br/
     = f.select(:marca, options_for_select([["Brastemp"],["Electrolux"], ["Philips"]]), {:class => "form-control"})  
   %p
-    = f.label :"Código"
+    = f.label :"Modelo (ex: frost free inverse)"
+    %br/
+    = f.text_area(:modelo, {:class => "form-control"})
+    %p
+    = f.label :"Código (ex: BRE57AK)"
     %br/
     = f.text_area(:codigo, {:class => "form-control"})
   %p
-    = f.label :"Modelo"
+    = f.label :"Carregar Manual (Em formato .PDF, .PNG ou .JPEG)"
     %br/
-    = f.text_area(:modelo, {:class => "form-control"})
-  %p
-    = f.label :"Carregar Manual"
-    %br/
-    = f.file_field(:path, {:class => "form-control"})
+    / = f.file_field(:path, {:class => "form-control"})
+    = file_field_tag(:path,  {:accept => '.pdf,.png,.jpeg,.jpg'})
   %p
     %button.btn{:class => "btn btn-primary"} Enviar Manual
     / = f.submit({:class => "btn btn-primary", M})

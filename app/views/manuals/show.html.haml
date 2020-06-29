@@ -1,6 +1,8 @@
-%h2= @manual.tipo
-%p= @manual.marca
-%p= @manual.codigo
-%p= @manual.modelo
+%h1 Página do Produto
+=@manual.tipo
+=@manual.marca
+=@manual.modelo
+=@manual.codigo
+%br
 - if @manual.path.attached?
   = link_to "Download", @manual.path, download: ""
