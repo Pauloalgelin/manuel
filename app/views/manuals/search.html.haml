@@ -1,5 +1,5 @@
 %h1 Busca
-%p Digite o tipo (ex: geladeira), marca (ex: brastemp), modelo (ex: frost free inverse) ou código (ex: BRE57AK) do produto a ser pesquisado
+%p Digite a categoria (ex: geladeira), marca (ex: brastemp), modelo (ex: frost free inverse) ou código (ex: BRE57AK) do produto a ser pesquisado
 = form_tag search_path, :method => "get" do
   = text_field_tag(:search, params[:search], {:class => "form-control"})
   %br
