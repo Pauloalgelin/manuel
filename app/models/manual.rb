@@ -1,5 +1,7 @@
 class Manual < ApplicationRecord
 	has_one_attached :path
+	validates_presence_of :codigo, :tipo, :marca, :modelo, :path
+
 
 	def self.search(search)
 		variable = search

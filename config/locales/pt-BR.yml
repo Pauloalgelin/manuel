@@ -1,0 +1,12 @@
+pt-BR:
+  activerecord:
+    errors:
+      models:
+        manual:
+          attributes:
+            codigo:
+              blank: 'não pode ser vazio'
+            modelo:
+              blank: 'não pode ser vazio'
+            path:
+              blank: 'não pode ser vazio'

@@ -14,13 +14,17 @@ class ManualsController < ApplicationController
 	end
 
 	def new
+		@manual = Manual.new
 	end
 
 	def create
 		@manual = Manual.new(manual_params)
 
-		@manual.save
-		redirect_to @manual
+		if @manual.save
+			redirect_to @manual
+		else
+			render 'new'
+		end
 	end
 
 	private def manual_params
