@@ -19,8 +19,8 @@
   %p
     = f.label :"Carregar Manual (Em formato .PDF, .PNG ou .JPEG)"
     %br/
-    / = f.file_field(:path, {:class => "form-control"})
-    = file_field_tag(:path,  {:accept => '.pdf,.png,.jpeg,.jpg'})
+    = f.file_field(:path, {:class => "form-control", :accept => '.pdf,.png,.jpeg,.jpg'})
+    / = file_field_tag(:path,  {:accept => '.pdf,.png,.jpeg,.jpg'})
   %p
     %button.btn{:class => "btn btn-primary"} Enviar Manual
     / = f.submit({:class => "btn btn-primary", M})
