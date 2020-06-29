@@ -2,5 +2,5 @@
 %p= @manual.marca
 %p= @manual.codigo
 %p= @manual.modelo
-%p= @manual.path
-
+- if @manual.path.attached?
+  = link_to "Download", @manual.path, download: ""
