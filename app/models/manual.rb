@@ -4,13 +4,9 @@ class Manual < ApplicationRecord
 	def self.search(search)
 		variable = search
 		if search
-
-			Manual.where('tipo LIKE :search OR marca LIKE :search OR codigo LIKE :search OR modelo LIKE :search', search: "%#{search}%")
-			# Manual.where(tipo: search)
-			# Manual.where(marca: search)
-			# Manual.where(codigo: search)
-			# Manual.where(modelo: search)
-			# Manual.where(path: search)
+			if search != ""
+				Manual.where('tipo LIKE :search OR marca LIKE :search OR codigo LIKE :search OR modelo LIKE :search', search: "%#{search}%")
+			end
 		else
 			return nil
 		# 	Manual.all

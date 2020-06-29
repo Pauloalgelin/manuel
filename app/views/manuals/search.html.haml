@@ -1,28 +1,32 @@
 %h1 Busca
+%p Digite o tipo, marca, modelo ou código do produto a ser pesquisado
 = form_tag search_path, :method => "get" do
-  = text_field_tag :search, params[:search]
+  = text_field_tag(:search, params[:search], {:class => "form-control"})
+  %br
   = submit_tag "Buscar"
 
 - if @manuals != nil
   - @manuals.each do |manual|
-    %ul
-      Tipo:
-      = manual.tipo
-      %br
-      Marca:
-      =  manual.marca
-      %br
-      Modelo:
-      =  manual.modelo
-      %br
-      Código:
-      =  manual.codigo
-      %br
-      Manual id:
-      = manual.id
-      %br
-      = link_to "Abrir Manual", :controller => "manuals", :action => "show", :id => manual.id
-      %br
-      - if manual.path.attached?
-        = link_to "Download", manual.path, download: ""
+    %br
+    Tipo:
+    = manual.tipo
+    %br
+    Marca:
+    =  manual.marca
+    %br
+    Modelo:
+    =  manual.modelo
+    %br
+    Código:
+    =  manual.codigo
+    / %br
+    / Manual id:
+    / = manual.id
+    %br
+    = link_to "Abrir Página do Manual", :controller => "manuals", :action => "show", :id => manual.id
+    / %br
+    / - if manual.path.attached?
+    /   = link_to "Download", manual.path, download: ""
+    %br
+  %br
 - else
