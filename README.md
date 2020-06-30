@@ -1,4 +1,4 @@
-Projeto da disciplina de Técnicas de Programação II - Primeira Fase
+Projeto da disciplina de Técnicas de Programação II - Segunda Fase
 
 Integrantes do grupo:
 Paulo Henrique Silva Araujo - 8941112  
@@ -23,19 +23,18 @@ Na aplicação temos um controlador, o manuals_controller.rb. Temos dois modelos
 -------------------------------------------------------------------------------
 O que falta fazer
 
-1. Ajustar e sofisticar o formulário, para que o usuário possa procurar um produto com base no tipo, marca ou código, de maneira individual. Também é necessário o ajuste para que o formulário pesquise por palavras semelhantes ou com diferentes grafias, por exemplo, se o usuário digitar "brastem" em vez de "brastemp", a pesquisa deve ser capaz de localizar o produto. Por enquanto apenas inputs exatos serão localizados no formulário.
+1. Armazenar os documentos enviados (podendo ser .pdf, .png ou .jpeg) no S3 da AWS. Por enquanto os manuais estão sendo armazenados localmente, preferimos associar a nossa plataforma com o S3 da Amazon quando hospedarmos a plataforma no Heroku.
 
-2. Ajustar o formulário de envio de manuais para aceitar o upload de documentos (.pdf e talvez outros formatos, como os de imagem) e armazená-los no S3 do AWS. 
+2. Linkar o manual enviado pelo usuário com a sua conta correspondente. Dando assim, os créditos necessários ao usuário que fez o upload.
 
-3. Linkar o manual enviado pelo usuário com a sua conta correspondente. Dando assim, os créditos necessários ao usuário que fez o upload.
+3. Um sistema de avaliação dos manuais, não queremos que o manual simplesmente entre na database, é importante que haja uma verificação antes de se aceitar os dados e o manual, assim como podemos corrigir eventuais erros cometidos pelo usuário
 
-4. Um sistema de avaliação dos manuais, não queremos que o manual simplesmente entre na database, é importante que haja uma verificação antes de se aceitar os dados e o manual, assim como podemos corrigir eventuais erros cometidos pelo usuário
+4. Hospedar a aplicação no Heroku (Fase Final)
 
-5. Lapidamento das views, completar a página da descrição sobre a aplicação e outros pequenos ajustes, como os de tradução, por exemplo.
+5. Eventuais outras questões que possam aparecer durante o desenvolvimento do projeto.
 
-6. Hospedar a aplicação no Heroku
-
-7. Eventuais outras questões que possam aparecer durante o desenvolvimento do projeto.
+-------------------------------------------------------------------------------
+Aspectos Técnicos do Projeto
 
 -------------------------------------------------------------------------------
 Eventuais problemas
