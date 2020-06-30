@@ -34,9 +34,6 @@ O que falta fazer
 5. Eventuais outras questões que possam aparecer durante o desenvolvimento do projeto.
 
 -------------------------------------------------------------------------------
-Aspectos Técnicos do Projeto
-
--------------------------------------------------------------------------------
 Eventuais problemas
 
 Caso haja o erro "Webpacker::Manifest::MissingEntryError"
